@@ -1,38 +1,24 @@
 {
   "name": "couchdb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Alexander Jakobsen, Mats Ove Mandt Skjaerstein",
   "summary": "Installs and configures CouchDB.",
   "license": "Apache-2.0",
   "source": "https://github.com/isberg1/couchdb",
   "dependencies": [
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": "= 5.1.0"
-    },
-    {
-      "name": "puppetlabs/apt",
-      "version_requirement": "= 6.1.1"
-    },
-    {
-      "name": "puppetlabs/inifile",
-      "version_requirement": ">= 2.3.0 < 2.4.0"
-    }
+    { "name": "puppetlabs/stdlib",  "version_requirement": ">= 6.0.0 < 7.0.0" },
+    { "name": "puppetlabs/apt",     "version_requirement": ">= 6.1.1 < 8.0.0" },
+    { "name": "puppetlabs/inifile", "version_requirement": ">= 2.3.0 < 4.0.0" }
   ],
   "data_provider": "hiera",
   "operatingsystem_support": [
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "18.04"
-      ]
-    }
+    { "operatingsystem": "CentOS",      "operatingsystemrelease": [ "7" ] },
+    { "operatingsystem": "RedHat",      "operatingsystemrelease": [ "7" ] },
+    { "operatingsystem": "OracleLinux", "operatingsystemrelease": [ "7" ] },
+    { "operatingsystem": "Ubuntu",      "operatingsystemrelease": [ "18.04" ] }
   ],
   "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": ">= 4.7.0 < 7.0.0"
-    }
+    { "name": "puppet", "version_requirement": ">= 5.0.0 < 7.0.0" }
   ],
   "pdk-version": "1.7.1",
   "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
