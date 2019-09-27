@@ -4,6 +4,12 @@
 # All parameters are optional. CouchDB wil supply its config-file with
 # default options if none is specified.
 #
+# @param package_ensure
+# What state the package should be in.
+# This could be one of standard ensure values, like 'installed', 'latest' a.s.o.
+# or it can be the exact version number to install.
+# Default value is 'installed'.
+#
 #
 # @param file_compression
 #	Method used to compress everything that is appended to database and view index files, except for attachments.
@@ -62,6 +68,7 @@
 
 class couchdb (
   # Available parameters:
+  String $package_ensure,
   Optional[Variant[Enum['none', 'snappy'], Pattern[/\Adeflate_[1-9]\z/]]] $file_compression,
   Optional[Integer] $max_dbs_open,
   Optional[Integer] $max_document_size,

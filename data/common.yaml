@@ -1,5 +1,9 @@
 # couchdb/data/common.yaml
 ---
+
+# Package installation
+couchdb::package_ensure: 'installed'
+
 # Server_Administration
 couchdb::file_compression: 'snappy'
 couchdb::max_dbs_open: 500
